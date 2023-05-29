@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "595915911905",
+    "project_id": "nibblenook-ae0a7",
+    "storage_bucket": "nibblenook-ae0a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595915911905:android:c948f8cc95af06274e7da0",
+        "android_client_info": {
+          "package_name": "com.nibblenook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiqViaqjHR4SNRzG-hOi1MzC6pCxlP4Do"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
