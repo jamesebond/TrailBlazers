@@ -24,8 +24,6 @@ function Login() {
             setIsAuthenticationg(false);
              navigation.navigate('ProfileScreen');
         } catch (error) {
-            console.error(error);
-            Alert.alert('Authentication failed!', 'Incorrect email or password')
         }
         
     }

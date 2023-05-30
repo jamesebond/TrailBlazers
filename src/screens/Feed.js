@@ -1,7 +1,6 @@
-import React from "react";
-import { Text, Container, Image } from "react-native";
+import React from 'react';
+import {Text, Container, Image} from 'react-native';
 // import PostCard from "../components/PostCard";
-
 
 // const posts = [
 //     {
@@ -29,7 +28,5 @@ import { Text, Container, Image } from "react-native";
 //     )
 // }
 export const Feed = () => {
-    return (
-        <Text>idk how add the postCards...</Text>
-    )
-}
+  return <Text>Work in progress!</Text>;
+};

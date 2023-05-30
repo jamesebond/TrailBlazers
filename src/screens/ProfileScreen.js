@@ -14,6 +14,7 @@ import firestore from '@react-native-firebase/firestore';
 import PostCard from '../components/PostCard';
 import MissionButton from '../components/MissionButton';
 import ExperienceBar from '../components/ExperienceBar.js';
+import CountryFlags from '../components/CountryFlags.js';
 
 const MissionsOpen = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -111,6 +112,29 @@ const ProfileScreen = ({navigation, route}) => {
 
   const handleDelete = () => {};
 
+  const visitedCountries = [
+    {
+      name: 'Singapore',
+      flag: require('../assets/singapore.png'),
+      visits: 20,
+    },
+    {
+      name: 'Japan',
+      flag: require('../assets/japan.png'),
+      visits: 12,
+    },
+    {
+      name: 'France',
+      flag: require('../assets/france.png'),
+      visits: 7,
+    },
+    {
+      name: 'United States',
+      flag: require('../assets/usa.png'),
+      visits: 3,
+    },
+  ];
+
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
       <ScrollView
@@ -121,12 +145,13 @@ const ProfileScreen = ({navigation, route}) => {
           style={styles.userImg}
           source={{uri: userData ? userData.userImg || 'https://lh5.googleusercontent.com/-b0PKyNuQv5s/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclxAM4M1SCBGAO7Rp-QP6zgBEUkOQ/s96-c/photo.jpg' : 'https://lh5.googleusercontent.com/-b0PKyNuQv5s/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclxAM4M1SCBGAO7Rp-QP6zgBEUkOQ/s96-c/photo.jpg'}}
         />
-        <Text style={styles.userName}>{userData ? userData.fname || 'Test' : 'Test'} {userData ? userData.lname || 'User' : 'User'}</Text>
+        <Text style={styles.userName}>{userData ? userData.fname || 'Test' : 'Test'} {userData ? userData.lname || 'User 🇸🇬' : 'User 🇸🇬'}</Text>
         {/* <Text>{route.params ? route.params.userId : user.uid}</Text> */}
         <Text style={styles.aboutUser}>
         {userData ? userData.about || 'No details added.' : ''}
         </Text>
-        <ExperienceBar level={1} currentXP={50} maxXP={100}/>
+        <CountryFlags visitedCountries={visitedCountries} />
+        <ExperienceBar level={7} currentXP={50} maxXP={100}/>
         <View style={styles.userBtnWrapper}>
           {route.params ? (
             <>
