@@ -13,6 +13,7 @@ import Missions from './Missions.js';
 import firestore from '@react-native-firebase/firestore';
 import PostCard from '../components/PostCard';
 import MissionButton from '../components/MissionButton';
+import ExperienceBar from '../components/ExperienceBar.js';
 
 const MissionsOpen = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -125,6 +126,7 @@ const ProfileScreen = ({navigation, route}) => {
         <Text style={styles.aboutUser}>
         {userData ? userData.about || 'No details added.' : ''}
         </Text>
+        <ExperienceBar level={1} currentXP={50} maxXP={100}/>
         <View style={styles.userBtnWrapper}>
           {route.params ? (
             <>
