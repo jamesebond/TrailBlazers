@@ -52,7 +52,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
           value={enteredEmail}
           keyboardType="email-address"
           isInvalid={emailIsInvalid}
-          placeholder='exxxxxxx@u.nus.edu'
+          placeholder='johndoe@gmail.com'
         />
         {!isLogin && (
           <Input
@@ -61,7 +61,7 @@ function AuthForm({ isLogin, onSubmit, credentialsInvalid }) {
             value={enteredConfirmEmail}
             keyboardType="email-address"
             isInvalid={emailsDontMatch}
-            placeholder='exxxxxxx@u.nus.edu'
+            placeholder='johndoe@gmail.com'
           />
         )}
         <Input
