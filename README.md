@@ -10,9 +10,9 @@ TrailBlazers allows users to post travel related picture and tag their posts wit
 Their experience points, levels of achievements and progress of their mission completed will be displayed in their profile page. 
 
 ## Tech Stack
-[React Native](https://reactnative.dev/): User interface
-[Android Studio](https://developer.android.com/studio): Running the app on Android devices
-[Firebase](https://firebase.google.com/): Authentication, storing and passing of users data
+- [React Native](https://reactnative.dev/): User interface
+- [Android Studio](https://developer.android.com/studio): Running the app on Android devices
+- [Firebase](https://firebase.google.com/): Authentication, storing and passing of users data
 
 ## Quickstart (for Android Studio)
 ### 1. Clone Repository
