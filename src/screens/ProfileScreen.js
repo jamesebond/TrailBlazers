@@ -8,10 +8,31 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
-import FormButton from '../components/FormButton.js';
+import Missions from './Missions.js';
 
 import firestore from '@react-native-firebase/firestore';
 import PostCard from '../components/PostCard';
+import MissionButton from '../components/MissionButton';
+
+const MissionsOpen = () => {
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const handlePress = () => {
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+
+
+  return (
+    <>
+      <MissionButton onPress={handlePress} />
+      {isPopupOpen && <Missions onClose={closePopup} />}
+    </>
+  );
+}
 
 const ProfileScreen = ({navigation, route}) => {
 
@@ -149,6 +170,9 @@ const ProfileScreen = ({navigation, route}) => {
           <PostCard key={item.id} item={item} onDelete={handleDelete} />
         ))}
       </ScrollView>
+      <View style={styles.missionsButtonContainer}>
+        <MissionsOpen />
+      </View>
     </SafeAreaView>
   );
 };
@@ -215,5 +239,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#666',
     textAlign: 'center',
+  },
+  missionsButtonContainer: {
+    position: 'absolute',
+    bottom: 20,
+    right: 20,
   },
 });
