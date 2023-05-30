@@ -40,12 +40,13 @@ export default function UploadImage() {
             //         </View>
             // </View>
         <View style={imageUploaderStyles.container}>
-            <Image source={{ uri : selectedImage }} style={{ width: 300, height: 300 }}/>
-            <TouchableOpacity onPress={changePhoto} style={imageUploaderStyles.inside}>
-                <Image source={{uri:selectedImage}} />
-                <Text style={imageUploaderStyles.text}>Change Photo</Text>
-        </TouchableOpacity>
-       </View>
+            {<Image source={{ uri : selectedImage }} style={{ width: 300, height: 300 }}/>}
+            <View style={imageUploaderStyles.uploadBtnContainer}>
+              <TouchableOpacity onPress={changePhoto}>
+                <Text style={imageUploaderStyles.text}>Add Photo</Text>
+              </TouchableOpacity>
+            </View>
+        </View>
   );
 }
 
@@ -69,7 +70,7 @@ const imageUploaderStyles=StyleSheet.create({
         bottom:0,
         backgroundColor:'lightgrey',
         width:'100%',
-        height:'25%',
+        height:'18%',
     },
     uploadBtn:{
         display:'flex',
@@ -78,5 +79,7 @@ const imageUploaderStyles=StyleSheet.create({
     },
     text: {
         alignSelf: 'center',
+        padding: 5,
+        fontSize:20,
     }
 })

@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         marginTop: 30,
         padding: 50,
         flexDirection: 'column',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         backgroundColor: '#FFE9E0'
     }, 
 
