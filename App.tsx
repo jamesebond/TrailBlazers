@@ -40,6 +40,7 @@ import AuthContent from './src/components/AuthContent';
 import AuthForm from './src/components/AuthForm';
 import BlueButton from './src/components/BlueButton';
 import ProfileScreen from './src/screens/ProfileScreen';
+import Rewards from './src/screens/Rewards';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -80,6 +81,10 @@ function AuthenticatedStack() {
             icon = focused
               ? require('./src/assets/add.jpeg')
               : require('./src/assets/add.jpeg');
+          } else if (route.name === 'Rewards') {
+            icon = focused
+              ? require('./src/assets/money.jpeg')
+              : require('./src/assets/money.jpeg');
           }
 
           // You can return any component that you like here!
@@ -94,6 +99,7 @@ function AuthenticatedStack() {
       <Tab.Screen name="Profile" component={ProfileScreen} />
       <Tab.Screen name="Feed" component={Feed} />
       <Tab.Screen name="CreatePost" component={CreatePost} />
+      <Tab.Screen name="Rewards" component={Rewards} />
     </Tab.Navigator>
   );
 }
